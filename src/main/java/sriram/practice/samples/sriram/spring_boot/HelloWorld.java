@@ -15,7 +15,7 @@ public class HelloWorld
     @GetMapping("/")
     public String index()
     {
-        return "Greetings from Sriram's Spring Boot Example #1!";
+        return "Greetings from Sriram's Spring Boot Example #2!";
     }
 
 }
