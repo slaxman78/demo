@@ -21,6 +21,15 @@
   <!-- FIXME change it to the project's website -->
   <!-- <url>http://www.example.com</url> -->
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>18</maven.compiler.source>
+    <maven.compiler.target>18</maven.compiler.target>
+    <sriram.junit.version>4.13.2</sriram.junit.version>
+    <sriram.spring-boot.version>2.7.2</sriram.spring-boot.version>
+    <sriram.spring.version>5.3.21</sriram.spring.version>
+  </properties>
+
   <build>
 
    <plugins>
@@ -39,6 +48,7 @@
         </configuration>
       </plugin>
     -->
+    <!--
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
@@ -63,19 +73,27 @@
               </execution>
           </executions>
       </plugin>
-
-
+    -->
+    <plugin>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-maven-plugin</artifactId>
+      <version>${sriram.spring-boot.version}</version>
+      <executions>
+          <execution>
+              <goals>
+                  <goal>repackage</goal>
+              </goals>
+              <configuration>
+                  <classifier>spring-boot</classifier>
+                  <mainClass>sriram.example.App</mainClass>
+              </configuration>
+          </execution>
+      </executions>
+  </plugin>
     </plugins>
   </build>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>18</maven.compiler.source>
-    <maven.compiler.target>18</maven.compiler.target>
-    <sriram.junit.version>4.13.2</sriram.junit.version>
-    <sriram.spring-boot.version>2.7.2</sriram.spring-boot.version>
-    <sriram.spring.version>5.3.21</sriram.spring.version>
-  </properties>
+
 
   <dependencies>
       <dependency>
