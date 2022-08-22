@@ -6,16 +6,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorld
 {
-
+    String message ; 
     public HelloWorld()
     {
-        
+        message = new String ("Greetings from Sriram's Spring Boot Example 22-Aug-22 v1!") ;
     }
 
     @GetMapping("/")
     public String index()
     {
-        return "Greetings from Sriram's Spring Boot Example #23!";
+        return this.message ;
     }
 
 }
