@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 /**
- * Hello world!
+ * Hello world with docker!
  *
  */
 @SpringBootApplication (scanBasePackages = { "sriram.practice.samples.sriram.spring_boot"} )
