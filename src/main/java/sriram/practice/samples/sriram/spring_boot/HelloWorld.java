@@ -9,7 +9,7 @@ public class HelloWorld
     String message ; 
     public HelloWorld()
     {
-        message = new String ("Greetings from Sriram's Spring Boot Example 11-Sep version 5") ;
+        message = new String ("Greetings from Sriram's Spring Boot Example 11-Sep version 6") ;
     }
 
     @GetMapping("/")
