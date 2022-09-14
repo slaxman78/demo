@@ -23,7 +23,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '18'
-        distribution: 'openjdk'
+        #distribution: 'openjdk'
         cache: maven
         
     - name: Step 3 - Build with Maven
